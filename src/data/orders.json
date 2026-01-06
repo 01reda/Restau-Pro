@@ -1,0 +1,24 @@
+[
+    {
+      "id": 101,
+      "tableId": 3,
+      "products": [
+        { "productId": 1, "quantity": 2 },
+        { "productId": 2, "quantity": 1 }
+      ],
+      "total": 140,
+      "status": "paid",
+      "date": "2025-06-20"
+    },
+    {
+      "id": 102,
+      "tableId": 1,
+      "products": [
+        { "productId": 3, "quantity": 1 }
+      ],
+      "total": 55,
+      "status": "pending",
+      "date": "2025-06-21"
+    }
+  ]
+  

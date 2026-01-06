@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "FreshFood SARL",
+      "product": "Vegetables",
+      "phone": "+212600000001",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "MeatPro",
+      "product": "Meat",
+      "phone": "+212600000002",
+      "status": "inactive"
+    }
+  ]
+  

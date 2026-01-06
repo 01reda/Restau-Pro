@@ -1,0 +1,70 @@
+.home-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Slides */
+  .bg-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 1.5s ease-in-out, transform 2s ease-in-out;
+  }
+  
+  .bg-slide.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Dark overlay */
+  .home-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+  
+  /* Content */
+  .home-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+    max-width: 600px;
+  }
+  
+  .home-overlay h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .home-overlay p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+  }
+  
+  .home-link {
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #dd8448;
+    padding-bottom: 4px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  .home-link:hover {
+    color: #dd8448;
+    border-color: #fff;
+  }
+  

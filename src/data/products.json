@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "name": "Pizza Margherita",
+      "category": "Pizza",
+      "price": 45,
+      "available": true,
+      "image": "/products/images/pizza-margherita.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Burger Classic",
+      "category": "Burger",
+      "price": 50,
+      "available": true,
+      "image": "/products/images/burger-classic.jpg"
+      
+    },
+    {
+      "id": 3,
+      "name": "Pasta Carbonara",
+      "category": "Pasta",
+      "price": 55,
+      "available": false,
+      "image": "/products/images/pasta-carbonara.jpg"
+    }
+  ]
+  

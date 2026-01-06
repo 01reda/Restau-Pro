@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "MARHOUM Mohamed Reda",
+      "role": "admin",
+      "email": "reda@restaurant.ma",
+      "active": true
+    },
+    {
+        "id": 2,
+        "name": "3ixa",
+        "role": "admin",
+        "email": "3ixa@restaurant.ma",
+        "active": true
+    },
+    {
+      "id": 2,
+      "name": "Sara Benali",
+      "role": "server",
+      "email": "sara@restaurant.ma",
+      "active": true
+    },
+    {
+        "id": 1,
+        "name": "Taha",
+        "role": "client",
+        "email": "Taha@client.ma",
+        "active": true
+      },
+      {
+        "id": 2,
+        "name": "Ikram",
+        "role": "client",
+        "email": "Ikram@client.ma",
+        "active": true
+      },
+    {
+      "id": 3,
+      "name": "Youssef Karim",
+      "role": "chef",
+      "email": "youssef@restaurant.ma",
+      "active": false
+    }
+  ]
+  

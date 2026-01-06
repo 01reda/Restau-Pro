@@ -1,0 +1,181 @@
+:root {
+    --electric-border-color: #dd8448;
+    --electric-light-color: rgba(221, 132, 72, 0.9);
+    --bg-dark: #0e0e0e;
+  }
+  
+  /* RESET */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--bg-dark);
+    color: white;
+    font-family: system-ui, sans-serif;
+  }
+  
+  /* CENTER */
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* SVG */
+  .svg-container {
+    position: absolute;
+  }
+  
+  /* CARD */
+  .card-container {
+    position: relative;
+    padding: 2px;
+    border-radius: 28px;
+  }
+  
+  .inner-container {
+    position: relative;
+  }
+  
+  .border-outer {
+    border: 2px solid rgba(221, 132, 72, 0.5);
+    border-radius: 28px;
+    padding: 4px;
+  }
+  
+  /* ELECTRIC CARD */
+  .main-card {
+    width: 420px;
+    height: 580px;
+    border-radius: 28px;
+    border: 2px solid var(--electric-border-color);
+    filter: url(#turbulent-displace);
+    overflow: hidden;
+  }
+  
+  /* GLOW */
+  .glow-layer-1,
+  .glow-layer-2 {
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+  }
+  
+  .glow-layer-1 {
+    border: 2px solid rgba(221, 132, 72, 0.6);
+    filter: blur(2px);
+  }
+  
+  .glow-layer-2 {
+    border: 2px solid var(--electric-light-color);
+    filter: blur(6px);
+  }
+  
+  .background-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    filter: blur(40px);
+    opacity: 0.3;
+    background: linear-gradient(
+      -30deg,
+      var(--electric-light-color),
+      transparent
+    );
+    z-index: -1;
+  }
+  
+  /* CONTENT */
+  .content-container {
+    position: absolute;
+    inset: 0;
+    padding: 32px;
+  }
+  
+  /* FORM */
+  .login-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* INPUTS */
+  .login-form input,
+  .login-form textarea {
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  /* ⚡ ELECTRIC FOCUS */
+  .login-form input:focus,
+  .login-form textarea:focus {
+    border-color: var(--electric-border-color);
+    box-shadow: 0 0 12px var(--electric-border-color);
+    animation: electricPulse 1s infinite alternate;
+  }
+  
+  @keyframes electricPulse {
+    from {
+      box-shadow: 0 0 6px var(--electric-border-color);
+    }
+    to {
+      box-shadow: 0 0 16px var(--electric-border-color);
+    }
+  }
+  
+  /* STARS */
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .stars span {
+    color: rgba(255, 255, 255, 0.3);
+    transition: 0.2s;
+  }
+  
+  .stars span.active {
+    color: var(--electric-border-color);
+    text-shadow: 0 0 10px var(--electric-border-color);
+  }
+  
+  /* BUTTON */
+  .login-form button {
+    margin-top: auto;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    background: var(--electric-border-color);
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .login-form button:hover {
+    box-shadow: 0 0 20px var(--electric-border-color);
+    transform: scale(1.04);
+  }
+  
