@@ -1,4 +1,4 @@
-import { useAuth } from "../../context/AuthContext";
+/*import { useAuth } from "../../context/AuthContext";
 
 const TableItem = ({ table, onClick }) => {
   const { user } = useAuth();
@@ -27,4 +27,4 @@ const TableItem = ({ table, onClick }) => {
   );
 };
 
-export default TableItem;
+export default TableItem;*/
