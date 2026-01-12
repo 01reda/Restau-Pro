@@ -1,0 +1,138 @@
+.dashbord-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #0f172a, #111827);
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* ===== TITLE ===== */
+  .dashbord-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  /* ===== CARDS GRID ===== */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .stat-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 50px rgba(0,0,0,0.7);
+  }
+  
+  .stat-card span {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+  
+  .stat-card strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 8px;
+  }
+  
+  /* COLORS */
+  .yellow { background: linear-gradient(145deg, #facc15, #eab308); }
+  .red { background: linear-gradient(145deg, #ef4444, #dc2626); }
+  .green { background: linear-gradient(145deg, #22c55e, #16a34a); }
+  
+  /* ===== TABLE SECTION ===== */
+  .dashbord-section {
+    margin-top: 45px;
+  }
+  
+  .dashbord-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  /* ===== TABLE ===== */
+  .dashbord-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b132b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(0,0,0,0.6);
+  }
+  
+  .dashbord-table thead {
+    background: #1f2937;
+  }
+  
+  .dashbord-table th {
+    padding: 18px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .dashbord-table td {
+    padding: 16px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .dashbord-table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .dashbord-table tr:hover {
+    background: rgba(255,255,255,0.05);
+  }
+  
+  /* ===== STATUS BADGES ===== */
+  .status {
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .status.free {
+    background: #16a34a;
+  }
+  
+  .status.reserved {
+    background: #dc2626;
+  }
+  
+  .status.reservedByMe {
+    background: #2563eb;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media(max-width: 968px){
+    .stats-grid{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  @media(max-width: 600px){
+    .stats-grid{
+      grid-template-columns: 1fr;
+    }
+  
+    .dashbord-page{
+      padding: 20px;
+    }
+  }
+  

@@ -1,10 +1,10 @@
 [
-  { "id": 1, "type": "round", "status": "available", "x": 80, "y": 60 },
-  { "id": 2, "type": "round", "status": "available", "x": 200, "y": 60 },
-  { "id": 3, "type": "rect", "status": "available", "x": 350, "y": 60 },
+  { "id": 1, "x": 120, "y": 120, "seats": 2, "status": "free", "zone": "gauche" },
+  { "id": 2, "x": 120, "y": 230, "seats": 2, "status": "reserved", "zone": "gauche" },
 
-  { "id": 4, "type": "rect", "status": "available", "x": 80, "y": 200 },
-  { "id": 5, "type": "round", "status": "available", "x": 220, "y": 200 },
+  { "id": 3, "x": 330, "y": 120, "seats": 4, "status": "free", "zone": "centre" },
+  { "id": 4, "x": 330, "y": 230, "seats": 4, "status": "free", "zone": "centre" },
 
-  { "id": 6, "type": "vip", "status": "reserved", "x": 420, "y": 180 }
+  { "id": 5, "x": 540, "y": 120, "seats": 6, "status": "reserved", "zone": "droite" },
+  { "id": 6, "x": 540, "y": 230, "seats": 6, "status": "free", "zone": "droite" }
 ]

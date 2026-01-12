@@ -15,22 +15,69 @@
 
 /* Table ronde */
 .table-seat {
-  width: 60px;
-  height: 60px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid rgba(255,255,255,0.15);
+  background: #1f1f1f;
+  border: 3px solid white;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-weight: bold;
-  transition: .2s;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
+/* Hover animation */
 .table-seat:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(255,255,255,0.5);
 }
+
+/* Tooltip */
+.table-seat::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: rgba(0,0,0,.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.table-seat:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Little arrow under tooltip */
+.table-seat::before {
+  content: "";
+  position: absolute;
+  bottom: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0,0,0,.9) transparent transparent transparent;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.table-seat:hover::before {
+  opacity: 1;
+}
+
 
 /* Libre */
 .table-seat.free {

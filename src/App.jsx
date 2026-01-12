@@ -9,6 +9,9 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ReviewPage from "./pages/ReviewPage";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
+import Dashbord from "./components/dashbord/dashbord";
+
+
 
 
 const App = () => {
@@ -23,6 +26,8 @@ const App = () => {
           <Route path="/reviews" element={<ReviewPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashbord" element={<Dashbord />} />
+
 
         </Routes>
       </Layout>

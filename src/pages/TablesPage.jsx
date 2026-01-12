@@ -1,5 +1,4 @@
-import { useState } from "react";
-import {useEffect} from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import TablesMap from "../components/tables/TablesMap";
@@ -20,7 +19,7 @@ export default function TablesPage() {
   const [selectedCity, setSelectedCity] = useState("");
 
   const closePopup = () => setShowPopup(false);
-  const filteredProducts = productsList.filter(p => p.city === selectedCity);
+  const filteredProducts = productsList.filter((p) => p.city === selectedCity);
 
   const [bgIndex, setBgIndex] = useState(0); // index de l'image
   const backgrounds = [
@@ -30,46 +29,40 @@ export default function TablesPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setBgIndex(prev => (prev + 1) % backgrounds.length);
+      setBgIndex((prev) => (prev + 1) % backgrounds.length);
     }, 5000); // change toutes les 5 secondes
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="reservation-page">
-
       {/* ================= ÉCRAN D’ACCUEIL ================= */}
       {!section && (
-  <div
-    className="home-selection"
-    style={{
-      position: "fixed",      // pour couvrir tout l’écran
-      top: 0,
-      left: 0,
-      width: "100vw",
-      height: "100vh",
-      backgroundImage: `url(${backgrounds[bgIndex]})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      transition: "background-image 1s ease-in-out",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      zIndex: 999,            // au-dessus de tout
-    }}
-  >
-    <h1 style={{ color: "#fff", textShadow: "0 2px 6px rgba(0,0,0,0.6)" }}>Bienvenue !</h1>
-    <p style={{ color: "#fff", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>Que souhaitez-vous faire ?</p>
+        <div className="hero-container">
+          {backgrounds.map((img, index) => (
+            <div
+              key={index}
+              className={`hero-slide ${index === bgIndex ? "active" : ""}`}
+              style={{ backgroundImage: `url(${img})` }}
+            />
+          ))}
 
-    <div className="home-buttons">
-      <button onClick={() => setSection("reservation")} className="home-btn">Réservation</button>
-      <button onClick={() => setSection("livraison")} className="home-btn">Livraison</button>
-    </div>
-  </div>
-)}
+          <div className="hero-content">
+            <h1>Bienvenue !</h1>
+            <p>Que souhaitez-vous faire ?</p>
 
+            <div className="home-buttons">
+              <button onClick={() => setSection("reservation")} className="home-btn">
+                Réservation
+              </button>
+
+              <button onClick={() => setSection("livraison")} className="home-btn">
+                Livraison
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ================= SECTION RESERVATION ================= */}
       {section === "reservation" && (
@@ -116,7 +109,9 @@ export default function TablesPage() {
                     <img src={p.image} className="product-image" alt={p.name} />
                     <h3 className="product-name">{p.name}</h3>
                     <p className="product-price">{p.price} DH</p>
-                    <button className="reserve-btn" onClick={() => setShowPopup(true)}>Commander</button>
+                    <button className="reserve-btn" onClick={() => setShowPopup(true)}>
+                      Commander
+                    </button>
                   </div>
                 ))}
               </div>
@@ -124,7 +119,7 @@ export default function TablesPage() {
           )}
 
           {/* Carte Leaflet */}
-          <h2 style={{marginTop: "30px"}}>Localisation pour livraison</h2>
+          <h2 style={{ marginTop: "30px" }}>Localisation pour livraison</h2>
           <MapContainer
             center={markerPosition}
             zoom={12}
@@ -156,7 +151,6 @@ export default function TablesPage() {
           </div>
         </div>
       )}
-
     </div>
   );
 }
